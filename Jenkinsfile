@@ -20,8 +20,8 @@ pipeline {
       stage('Build') {
          steps {
             sh '''
-                  ls
-                  //kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
+                  microk8s kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
+                  
                '''
          }
       }
